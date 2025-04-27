@@ -32,7 +32,8 @@ const Hero = () => {
 
       <Button className='cursor-pointer' onClick={handleButtonClick} >Get Started, It's Free</Button>
 
-      <img src="/landingpage.png" className='m-15'/>
+      <img src="/landingpage.png" className='m-15 h-full w-full xs:h-[400px] xs:w-[400px]' />
+
     </div>
   )
 }
