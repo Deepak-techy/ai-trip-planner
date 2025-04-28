@@ -12,7 +12,7 @@ const PlaceCardItem = ({ place }) => {
     useEffect(() => {
         async function getImage() {
             const url = await fetchPlaceImage(place?.place_name);
-            if(url) {
+            if (url) {
                 setImageUrl(url);
             }
         }
@@ -25,7 +25,7 @@ const PlaceCardItem = ({ place }) => {
     return (
         <Link to={'https://www.google.com/maps/search/?api=1&query=' + place?.place_name} target='_blank'>
             <div className='border rounded-xl shadow-sm p-3 flex gap-4 h-[200px] overflow-hidden mt-3 hover:scale-105 transition-all hover:shadow-xl  '>
-                <img src={ imageUrl } className='w-[200px] h-full rounded-lg object-cover' />
+                <img src={imageUrl} className='w-[200px] h-full rounded-lg object-cover' />
 
                 <div className='flex flex-col justify-between w-full overflow-hidden'>
                     <div className='overflow-hidden'>
@@ -46,6 +46,8 @@ const PlaceCardItem = ({ place }) => {
                         <p className='text-xs md:text-sm text-gray-500'>⏱️ {place?.time_to_travel}</p>
                     </div>
                 </div>
+
+
             </div>
         </Link>
     )

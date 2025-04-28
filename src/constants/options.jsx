@@ -57,7 +57,7 @@ export const SelectBudgetOptions = [
 export const AI_PROMPT = `Generate Travel Plan for Location: \${Location}, for \${NoOfDays} Days for \${TravelCompanion} with a \${Budget} budget. 
 Give me a Hotels options list with Hotel Name, Hotel address, Price, hotel image url, geo coordinates, rating, descriptions 
 and suggest itinerary with place Name, Place Details, Place Image Url, Geo Coordinates, ticket Pricing, rating, 
-Time travel each of the location for \${NoOfDays} days with each day plan with best time to visit in the following JSON format:
+Time travel each of the location for \${NoOfDays} days with each day plan with best time to visit. Don't stop untill you give me the itinerary for the required no. of days. Give all the details in the following JSON format:
 
 {
   "hotels": [

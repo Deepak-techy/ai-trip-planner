@@ -81,8 +81,14 @@ const Header = () => {
           <Button className='rounded-lg cursor-pointer' onClick={() => setOpenDialog(true)}>Sign in</Button>
         }
       </div>
-      <Dialog open={OpenDialog}>
-        <DialogContent>
+      <Dialog open={OpenDialog} onOpenChange={setOpenDialog}>
+        <style>{`
+            div[data-state="open"] > button.absolute.top-4.right-4 {
+            cursor: pointer !important;
+          }
+        `}
+        </style>
+        <DialogContent className="sm:max-w-md" closeButtonClassName="cursor-pointer" >
           <DialogHeader>
             <DialogDescription>
               <img className='w-20' src="/logo.svg" />

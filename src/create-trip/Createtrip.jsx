@@ -106,8 +106,12 @@ const Createtrip = () => {
       setOpenDialog(true);
       return;
     }
-    if (formData?.NoOfDays > 5 && !formData?.Location || !formData?.Budget || !formData?.TravelCompanion) {
+    if (!formData?.NoOfDays || !formData?.Location || !formData?.Budget || !formData?.TravelCompanion) {
       toast('Please fill all the details');
+      return;
+    }
+    if (formData?.NoOfDays > 15) {
+      toast('Please select less than 15 days');
       return;
     }
 
