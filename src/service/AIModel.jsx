@@ -7,7 +7,7 @@ const genAI = new GoogleGenerativeAI(apiKey);
 export async function generateTripPlan(promptText) {
   try {
     const model = genAI.getGenerativeModel({
-      model: "gemini-1.5-pro",
+      model: "gemini-1.5-flash",
       generationConfig: { temperature: 0.8 },
     });
 
@@ -36,12 +36,3 @@ export async function generateTripPlan(promptText) {
   }
 }
 
-
-
-
-    // return response.text()
-    // .replace(/```json|```/g, '')
-    // .replace(/Important Notes and Enhancements:[\s\S]*?(?=\}|$)/i, '') // Remove the notes section
-    // .replace(/(^|\s)\/\/.*$/gm, '')   // Remove single-line comments (more precise)
-    // .replace(/\/\*[\s\S]*?\*\//g, '') // Remove multi-line comments
-    // .trim();
