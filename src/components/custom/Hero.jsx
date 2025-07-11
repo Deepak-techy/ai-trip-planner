@@ -14,7 +14,7 @@ const Hero = () => {
     setUser(storedUser);
 
     if (!storedUser) {
-      toast('Please Signin First');
+      toast('Please Sign in First');
     } else {
       navigate('/create-trip');
     }
