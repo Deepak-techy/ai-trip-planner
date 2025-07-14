@@ -91,7 +91,7 @@ const Header = () => {
         <DialogContent className="sm:max-w-md" closeButtonClassName="cursor-pointer" >
           <DialogHeader>
             <DialogDescription>
-              <img className='w-20' src="/logo.svg" />
+              <img className='w-20' src="/logo.png" />
               <h2 className='font-bold text-lg mt-7'>Sign In With Google</h2>
               <p>Sign in to the App With Google Authentication securely</p>
 
