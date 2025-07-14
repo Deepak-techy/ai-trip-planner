@@ -110,8 +110,8 @@ const Createtrip = () => {
       toast('Please fill all the details');
       return;
     }
-    if (formData?.NoOfDays > 15) {
-      toast('Please select less than 15 days');
+    if (formData?.NoOfDays > 8) {
+      toast('Please select less than 8 days');
       return;
     }
 
